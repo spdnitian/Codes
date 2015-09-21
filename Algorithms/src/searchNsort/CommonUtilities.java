@@ -5,6 +5,9 @@ import java.util.Collections;
 import java.util.Random;
 
 public class CommonUtilities {
+	public static boolean isOdd(int num) {
+		return ((num & 1) == 1 ? true : false);
+	}
 	public static int findMinValueIndex(int value){
 			return 0;
 	}
