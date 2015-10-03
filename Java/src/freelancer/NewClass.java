@@ -1,5 +1,7 @@
 package freelancer;
 
+import java.io.IOException;
+
 public class NewClass {
 	int[] ab = new int[10000];
 	String id;
@@ -15,8 +17,9 @@ public class NewClass {
 		System.out.println(this.id + " finalize called");
 	}
 	public static void main(String[] args) throws Throwable {
-		new NewClass("a").callType1();
-		new NewClass("b").callType2();
+		/*new NewClass("a").callType1();
+		new NewClass("b").callType2();*/
+		B3.compare();
 	}
 	private void callType1() {
 		long a = 1000;
@@ -61,7 +64,19 @@ class B1 extends A1{
 }
 
 interface i1{
-	public static void name() {
+	/*public static void name() {
 		
+	}*/
+}
+
+class B3{
+	public static void compare() {
+		Integer a1 = 1, a2 = 1;
+		System.out.println(a1 == 1);
+		System.out.println(a2 == a1);
+	}
+	
+	public B3() throws IOException {
+		throw new IOException();
 	}
 }
