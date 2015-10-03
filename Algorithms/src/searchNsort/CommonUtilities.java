@@ -35,6 +35,26 @@ public class CommonUtilities {
 		return arr;
 	}
 	
+	public static void swapInArr(int[] arr, int i, int j) {
+		int num = arr[i];
+		arr[i] = arr[j];
+		arr[j] = num;
+	}
+	
+	public static int[] getArrOfRandom01(int length) {
+		ArrayList<Integer> a = new ArrayList<>(length);
+		for (int i = 0; i < length; i++){
+		    a.add(i);
+		}
+		Collections.shuffle(a);
+		int a_length = a.size();
+		int[] arr = new int[a_length];
+		for (int i = 0; i < length; i++) {
+			arr[i] = a.get(i) & 1;
+		}
+		return arr;
+	}
+	
 	public static int getRandomInt() {
 		Random randomGenerator = new Random();
 		return randomGenerator.nextInt(100);
