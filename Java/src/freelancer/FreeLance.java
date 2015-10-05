@@ -45,9 +45,9 @@ public abstract class FreeLance {
 }
 
 interface i {
-	public static void x(){
+	/*public static void x(){
 		System.out.println("OMG");
-	};
+	};*/
 	public void y();
 }
 
@@ -81,4 +81,24 @@ class FEEE extends FEE{
 	public FEEE() {
 		System.out.println();
 	}
+}
+
+class t1 implements Runnable{
+
+	@Override
+	public void run() {
+		// TODO Auto-generated method stub
+		
+	}
+	
+}
+
+class t2 implements Runnable{
+
+	@Override
+	public void run() {
+		// TODO Auto-generated method stub
+		
+	}
+	
 }
