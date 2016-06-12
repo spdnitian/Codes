@@ -61,7 +61,7 @@ public class Eulerian {
 	}
 	/*
 	 * A graph is eulerian if it contains a eulerian cycle.
-	 * A eulerian cycle is a CYCLE whic vists ALL EDGES EXACTLY ONCE.
+	 * A eulerian cycle is a CYCLE which visits ALL EDGES EXACTLY ONCE.
 	 * */
 	public static boolean isEulerian(int[][] graph){
 		boolean isEulerian = true;
@@ -84,7 +84,7 @@ public class Eulerian {
 	}
 	/*
 	 * A graph is semi-eulerian if it contains a eulerian path.
-	 * A eulerian path is a PATH whic vists ALL EDGES EXACTLY ONCE.
+	 * A eulerian path is a PATH which visits ALL EDGES EXACTLY ONCE.
 	 * */
 	public static boolean isSemiEulerian(int[][] graph){
 		boolean isSemiEulerian = true;
