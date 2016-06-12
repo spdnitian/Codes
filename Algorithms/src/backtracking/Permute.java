@@ -1,5 +1,7 @@
 package backtracking;
 
+import java.util.Scanner;
+
 public class Permute {
 	static void swap (char[] a,int i,int j)
 	{
@@ -14,26 +16,47 @@ public class Permute {
 	   1. String
 	   2. Starting index of the string
 	   3. Ending index of the string. */
-	static void permute(char[] a, int i, int n) 
+	static void permute(char[] a, int i) 
 	{
 	   int j; 
-	   if (i == n)
+	   if (i == a.length - 1)
 	     System.out.println(a);
 	   else
 	   {
-	        for (j = i; j <= n; j++)
+	        for (j = i; j <= a.length - 1; j++)
 	       {
 	          swap(a,i,j);
-	          permute(a, i+1, n);
+	          permute(a, i+1);
 	          swap(a,i,j); //backtrack
 	       }
 	   }
-	} 
+	}
+	
+	static void permuteUnique(char[] a, int i) 
+	{
+	   int j; 
+	   if (i == a.length - 1)
+	     System.out.println(a);
+	   else
+	   {
+	        for (j = i; j <= a.length - 1; j++)
+	       {
+	          if(j == i || (a[i] != a[j])){
+	        	  swap(a,i,j);
+		          permute(a, i+1);
+		          swap(a,i,j); //backtrack
+	          }
+	       }
+	   }
+	}
 	 
 	/* Driver program to test above functions */
 	public static void main(String[] args)
 	{
-	   char a[] = "ABCD".toCharArray();  
-	   permute(a, 0, a.length-1);
+		String str = new Scanner(System.in).nextLine();
+		char a[] = str.toCharArray();
+		permute(a, 0);
+		System.out.println("-----------");
+		permuteUnique(a, 0);
 	}
 }
