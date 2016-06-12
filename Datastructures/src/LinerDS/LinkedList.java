@@ -13,6 +13,10 @@ public class LinkedList {
 		public int getValue() {
 			return nodeVal;
 		}
+		
+		public void setValue(int val) {
+			nodeVal = val;
+		}
 	}
 	
 	public void insertNode(int nodeVal) {
@@ -62,6 +66,40 @@ public class LinkedList {
 			}
 		}
 	}
+	
+	public LinkNode getHead(){
+		return headNode;
+	}
+	
+	public void setHead(LinkNode newHead){
+		LinkNode oldHead = headNode;
+		if(newHead == null){
+			headNode = null;
+		}else{
+			newHead.nextNode = oldHead;
+			headNode = newHead;
+		}
+	}
+	public void printList(){
+		printList(headNode);
+	}
+	private void printList(LinkNode startNode) {
+		if(startNode != null){
+			System.out.print(startNode.getValue() + " ");
+			printList(startNode.nextNode);
+		}
+	}
+
+	public int size() {
+		return size(headNode);
+	}
+	private int size(LinkNode startNode) {
+		if(startNode == null){
+			return 0;
+		}
+		return 1 + size(startNode.nextNode);
+	}
+
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
