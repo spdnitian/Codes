@@ -91,12 +91,22 @@ public class CommonUtilities {
 	}
 	
 	public static int getMax(int...vals) {
-		int max = 0;
+		int max = Integer.MIN_VALUE;
 		for (int i : vals) {
 			if(i > max){
 				max = i;
 			}
 		}
 		return max;
+	}
+	
+	public static int getMin(int...vals) {
+		int min = Integer.MAX_VALUE;
+		for (int i : vals) {
+			if(i < min){
+				min = i;
+			}
+		}
+		return min;
 	}
 }
