@@ -5,7 +5,7 @@ public class MeasureTimings {
 		long second = (millis / 1000) % 60;
 		long minute = (millis / (1000 * 60)) % 60;
 		long hour = (millis / (1000 * 60 * 60)) % 24;
-		String timeFormatted = String.format("%02d:%02d:%02d:%03d", hour, minute, second, millis);
+		String timeFormatted = String.format("%02d:%02d:%02d:%03d", hour, minute, second, millis % 1000);
 		return timeFormatted;
 	}
 	public static void meauseRecursiveTimeTaken(TimeTesting test) {
