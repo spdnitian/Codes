@@ -53,10 +53,12 @@ public class Permute {
 	/* Driver program to test above functions */
 	public static void main(String[] args)
 	{
-		String str = new Scanner(System.in).nextLine();
+		Scanner scanner = new Scanner(System.in);
+		String str = scanner.nextLine();
 		char a[] = str.toCharArray();
 		permute(a, 0);
 		System.out.println("-----------");
 		permuteUnique(a, 0);
+		scanner.close();
 	}
 }
