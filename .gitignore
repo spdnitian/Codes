@@ -3,3 +3,4 @@ RemoteSystemsTempFiles
 MediApp
 .metadata
 *.class
+/.recommenders/
