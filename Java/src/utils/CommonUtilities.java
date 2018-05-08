@@ -73,4 +73,15 @@ public class CommonUtilities {
 		return max;
 	}
 	
+	public static int getSum(int... values) {
+		int sum = 0;
+		for (int i : values) {
+			if(i == Integer.MAX_VALUE) {
+				return i;
+			}
+			sum += i;
+		}
+		return sum;
+	}
+	
 }
